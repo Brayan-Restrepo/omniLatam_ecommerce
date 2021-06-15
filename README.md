@@ -61,4 +61,9 @@ pip install virtualenv
 # cambiar python3.7 por la ubicación del python 3.7 
 virtualenv env_omniLatam_ecommerce -p python3.7
 source env_omniLatam_ecommerce/bin/activate
+pip install -r requirements.txt
+python manage.py runserver
+python manage.py test
+python manage.py makemigrations
+python manage.py migrate
 ```
