@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "9c18c0c3-b0a2-46d6-8614-2bf41ff4bafd",
+		"name": "omniLatam_ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "brayan2293@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "brayan2293",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9097/api/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsImV4cCI6MTYyMzQ2MTk5NCwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20ifQ.JSc3gaM30-WiuXZWQHYmZCQ9BqfkIqKyFaP6OI_jcl0",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9097/api/logout/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsImV4cCI6MTYyMzQ2NTM0NSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20ifQ.Ia00FfgcQvf_Rdhy5p2KaYlw-jOWmkV2eUWl-AXRGnU",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "brayan223@gmailcxx.come",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "bresgalexxtfee",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "3214361170",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "brayan2293",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "brayan2293",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Bres",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Gale",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9097/api/users/signup/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"users",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9097/api/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNzM0NjI2LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.qELfIOSThG0cKQZq6Dt2WJB19B_FSUk6-HEJymijJEw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "ABC001",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "PC Intel i5",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Pc ",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "3400000.0",
+							"type": "text"
+						},
+						{
+							"key": "iva",
+							"value": "590000.0",
+							"type": "text"
+						},
+						{
+							"key": "supplier",
+							"value": "Intel",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9097/api/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto  Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNzA5MDI3LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.lE_Lm3byYiY5xX9IFa7i0zIW0p27ldRcwM5_oHNm3rQ"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "ABC001",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "PC i5",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Pc ",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1300000.0",
+							"type": "text"
+						},
+						{
+							"key": "iva",
+							"value": "470000.0",
+							"type": "text"
+						},
+						{
+							"key": "price_total",
+							"value": "1300000.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "supplier",
+							"value": "Intel",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9097/api/product/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"product",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto  Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNjU4NTc2LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.XetM7ILrj3lePpSIoT1lAZvWye3OVjkR92cAvS28PIM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:9097/api/product/2/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"product",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto  Consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNjU4NTc2LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.XetM7ILrj3lePpSIoT1lAZvWye3OVjkR92cAvS28PIM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:9097/api/product/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"product",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orden  Consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNzE0NjY1LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.jragvnADydhx_-vuIPk37vyCHHLfg3wqgTwWvEGrVCI"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:9097/api/order/45/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"order",
+						"45",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orden  Listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNzM1Mjc0LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.ihdo4u_5yAAJcLtNyjs4W-qVMpkIf7Y_-80BZ5JkDTg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:9097/api/order/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orden  Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNzM2MzE2LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.mJsynq2OKF2sEszR94LO56lrnl_vwtonLHBqwD4Y9I8"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_list[0]",
+							"value": "{\"product\": 1,\"amount_product\": 5}",
+							"type": "text"
+						},
+						{
+							"key": "product_list[1]",
+							"value": "{\"product\": 4,\"amount_product\": 3}",
+							"type": "text"
+						},
+						{
+							"key": "product_list[2]",
+							"value": "{\"product\": 3,\"amount_product\": 7}",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9097/api/order/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions  Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImJyYXlhbjIyOTNAZ21haWwuY29tIiwiZXhwIjoxNjIzNzM2MzE2LCJlbWFpbCI6ImJyYXlhbjIyOTNAZ21haWwuY29tIn0.mJsynq2OKF2sEszR94LO56lrnl_vwtonLHBqwD4Y9I8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_list[0]",
+							"value": "{\"order\": 50,\"payment\": 110845000}",
+							"type": "text"
+						},
+						{
+							"key": "order_list[1]",
+							"value": "{\"order\": 52,\"payment\": 195000.0}",
+							"type": "text"
+						},
+						{
+							"key": "payment_method",
+							"value": "PSE",
+							"type": "text"
+						},
+						{
+							"key": "code_transactions",
+							"value": "AAA00001",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9097/api/transactions/",
+					"host": [
+						"localhost"
+					],
+					"port": "9097",
+					"path": [
+						"api",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

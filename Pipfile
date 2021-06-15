@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+djangorestframework = "*"
+djangorestframework-jwt = "*"
+django-filter = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+start           = "python manage.py runserver"
+test            = "python manage.py test"
+makemigrations  = "python manage.py makemigrations"
+migrate         = "python manage.py migrate"
+
+[dev-packages]
+autopep8 = "*"

@@ -1,0 +1,9 @@
+name: Deploy on Heroku App
+
+on:
+  workflow_dispatch:
+
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+  
