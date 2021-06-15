@@ -15,7 +15,7 @@ from rest_framework.authtoken.models import Token
 DISPONIBLE = 'DISPONIBLE'
 AGOTADO = 'AGOTADO'
 
-class InvitationsManagerTestCase(TestCase):
+class ProductTestCase(TestCase):
     """Invitations manager test case."""
 
     def setUp(self):
