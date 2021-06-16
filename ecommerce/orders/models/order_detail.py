@@ -46,7 +46,6 @@ class OrderDetail(BaseModel):
 
     def save(self, *args, **kwargs):
         try:
-            # import pdb; pdb.set_trace()
             self.price = self.product.price
             self.iva = self.product.iva
             self.price_total = self.product.price_total

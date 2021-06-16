@@ -9,24 +9,7 @@ from django.db import models
 from ecommerce.base.model import BaseLogModel, BaseModel
 from ecommerce.users.models.users import User
 from ecommerce.includes.email import send_mail
-
-PENDIENTE = 'PENDIENTE'
-ABONADO = 'ABONADO'
-PAGADO = 'PAGADO'
-PAGADO_ENVIADO = 'PAGADO - ENVIADO'
-PAGADO_ENTREGADO = 'PAGADO - ENTREGADO'
-CANCELADO = 'CANCELADO'
-FINALIZADO = 'FINALIZADO'
-
-STATUS = [
-    (PENDIENTE, PENDIENTE),
-    (ABONADO, ABONADO),
-    (PAGADO, PAGADO),
-    (PAGADO_ENVIADO, PAGADO_ENVIADO),
-    (PAGADO_ENTREGADO, PAGADO_ENTREGADO),
-    (CANCELADO, CANCELADO),
-    (FINALIZADO, FINALIZADO),
-]
+from ..settings import PENDIENTE, ABONADO, PAGADO, STATUS
 
 class OrderLog(BaseLogModel):
     '''Log modelo transaccional de ordenes'''
