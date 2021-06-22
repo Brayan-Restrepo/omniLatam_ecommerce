@@ -8,7 +8,7 @@ import decimal
 from django.db import models
 from ecommerce.base.model import BaseLogModel, BaseModel
 from ecommerce.users.models.users import User
-from ecommerce.includes.email import send_mail
+from ecommerce.includes.email import async_send_mail
 from ..settings import PENDIENTE, ABONADO, PAGADO, STATUS
 
 class OrderLog(BaseLogModel):
@@ -51,7 +51,7 @@ class Order(BaseModel):
                 self.status = ABONADO
             elif self.residue <= 0 and self.status in [PENDIENTE, ABONADO]:
                 self.status = PAGADO
-                send_mail('Tu compra ha sido completada - OmniLatam', self.user, self.user.email)
+                async_send_mail('Tu compra ha sido completada - OmniLatam', self.user, self.user.email)
 
             super().save(*args, **kwargs)
         except Exception as e:

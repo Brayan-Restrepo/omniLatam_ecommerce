@@ -143,8 +143,6 @@ EMAIL_HOST_USER = 'pruebaomnilatam@gmail.com'
 EMAIL_HOST_PASSWORD = 'OmniLatam$123456'
 
 
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
